@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+}
+nav{
+    display: flex;
+    background-color: #89B0AE;
+    height: 50px;
+}
+ul{
+    list-style-type: none;
+    overflow: hidden;
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+ul li   {
+    float: left;
+}
+ul li a {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+.logo{
+    margin-top: 5px;
+    flex: 1;
+    padding: 10px 20px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+.logo h4{
+    padding: 10px;
+    font-family: 'Merienda One', cursive;
+    font-size: 30px;
+    color: #FAF9F9;
+}
+.recipes{
+    font-size: 20px;
+    color: #555B6E;
+}
+.container{
+    display: flex;
+    height: 100%;
+    border: 1px solid black;
+}
+.containerLeft{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+.Text{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FFD6BA;
+    padding: 10px;
+    border-radius: 20px;
+}
+.Text h1 {
+    text-align: center;
+    font-size: 80px;
+    line-height: 70px;
+    margin: 30px 0;
+}
+.Text p { 
+    text-align: center;
+    font-size: 20px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.Text p  a{
+    font-weight: 700;
+    text-decoration: none;
+    color: #89B0AE;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button  {
+    width: 250px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+.getTheRecipe{
+    border: 1px solid #89B0AE;
+    border-radius: 7px;
+    background-color:#FAF9F9;
+}
+.seeAll{
+background-color: #89B0AE;
+border: 1px solid #FAF9F9;
+border-radius: 7px;
+}
+
+.containerRight{
+    flex: 2;
+    height: 800px;
+}
+.containerRight img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+ul li a:hover {
+    text-decoration: none;
+    color: #FAF9F9;
+    background-color:#BEE3DB ;
+}

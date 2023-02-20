@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.container {
+    width: 100vw;
+    height: 51vh;
+    background-color: lightblue;
+}
+#btnControl {
+    display: none;
+}
+
+#btnControl:checked + label > .circle {
+    padding: 10vw;
+    margin-top:  10vh; 
+    margin-left:80vw ;
+    border-radius: 50%;
+    background-color: blue;
+    rotate: 8640deg;
+    transition: 1s ease-in-out;
+}
+.btn{
+    display: flex;
+}
+.circle{
+    background-color: black;
+    padding: 1vw;
+}
+#btnControl2 {
+    display: none;
+}
+
+#btnControl2:checked + label > .circle2 {
+    padding: 10vw;
+    margin-top:  10vh; 
+    margin-left:80vw ;
+    border-radius: 50%;
+    background-color: blue;
+    rotate: 8640deg;
+    transition: 1s ease-in-out;
+}
+.btn2{
+    display: flex;
+}
+.circle2{
+    background-color: black;
+    padding: 1vw;
+}

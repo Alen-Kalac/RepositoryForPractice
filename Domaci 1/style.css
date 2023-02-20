@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: flex;
+}
+.mainSidebar{
+    flex: 2;
+    height: 100vh;
+}
+.mainSidebar h1{
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    font-size: 37px;
+}
+span{
+    color: orange;
+}
+.mainContent{
+    flex: 14;
+    height: 100vh;
+}
+.ulSidebar{
+    margin-top: 15px;
+}
+.ulSidebar .liHeading{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 20px;
+    color: gray;
+    list-style: none;
+    margin-top: 20px; margin-bottom: 10px;
+}
+.ulSidebar .liMenu   {
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+}
+.ulSidebar .liMenu a {
+    text-decoration: none;
+    color: rgb(175, 175, 175);
+    padding: 10px 20px;
+    display: flex;
+}
+.ulSidebar .liMenu a:hover{
+    color: white;
+    background-color: lightgray;
+}
+.topBar{
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid lightgray;
+}
+
+.searchBar{
+    height: 30px;
+    width: 250px;
+    border-radius:15px ;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.searchBar input{
+    height: 30px;
+    width: 230px;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+.searchBar input:focus {
+outline: none;
+}
+.topBarLeft{
+    flex: 7;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.topBarRight{
+    margin-right: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.menuIcon{
+    height: 30px;
+    border-radius: 50%;
+}
+.profileImage{
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.content{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+}
+.card{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 350px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.75);
+
+}
+.cardLeft{
+    flex: 1;
+    box-sizing: border-box;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+.cardRight{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover{
+    box-shadow: 0px 10px 30px -10px rgba(0,0,0,0.75);
+}
+.cardLink{
+    text-decoration: none;
+    font-size: 15px;
+    color: orange;
+}

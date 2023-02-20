@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.headerDiv{
+    background-color: #003580;
+    margin-bottom: 35px;
+}
+
+header{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1140px;
+    height: 72px;
+    align-items: center;
+    justify-content: space-around;
+}
+input{
+    padding-left: 10px;
+}
+
+.logo{
+    flex: 1;
+    color: white;
+}
+.buttons{
+    flex:5;
+    display: flex;
+    justify-content: flex-end;
+}
+.buttons img{
+    display: none;
+}
+.buttons h4 {
+    color: white;
+    padding: 10px 10px;
+    margin-left: 5px;
+    border: 1px solid white;
+}
+.main{
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+}
+.mainLeft{
+    flex: 1;
+    margin-right: 20px;
+    height: 100vh;
+}
+.trazi{
+    background-color: #febb02;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    height: 416px;
+    width: 264px;
+}
+.divButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnPretrazi{
+  padding: 12px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  width: 224px;
+}
+.filter{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    height: 38px;
+}
+.mainRight{
+    box-sizing: border-box;
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  
+}
+.card{
+    border: 1px solid black;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.cardDescription{
+    flex: 1;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+img{
+    height: 200px;
+    object-fit: fill;
+
+}
+.cardDescriptionRowOne{
+    display: flex;
+    height: 50px;
+   
+}
+.imeHotela{
+    flex: 1;
+    text-align: left;
+}
+.rating{
+    flex: 1;
+    text-align: right;
+}
+.cardDescriptionRowTwo{
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    box-sizing: border-box;
+    height: 180px;
+    
+    overflow: hidden;
+
+
+}
+.cardDecsriptionRowThree{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 50px;
+    
+}
+.cardDescriptionRowTwo p  {
+    padding: 3px;
+}
+
+.btnRezervisi{
+    padding: 10px 40px;
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+button:hover{
+    background-color: #003580;
+}
+.cardDescriptionRowOne,.cardDecsriptionRowThree{
+    flex: 1;
+    box-sizing: border-box;
+}
+.cardDescriptionRowTwo{
+    flex: 4;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 414px) {
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+    .headerDiv{
+        margin: 0;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+        height: 60px;
+    }
+    .headerDiv .buttons h4{
+        display: none;
+    }
+    .headerDiv .buttons img{
+        display: block;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .mainLeft{
+        width: 100%;
+    }
+    .trazi{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .trazi div {
+        display: none;
+    }
+    .trazi h2{
+        text-align: center;
+    }
+    .card{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+}
