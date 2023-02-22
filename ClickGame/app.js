@@ -46,6 +46,7 @@ buttonPlay.addEventListener("mousedown", () => {
     const newTarget = document.createElement("div");
     newTarget.className = "targetDiv";
     const broj = getRandomNumber(0, 50);
+    //Odds for new div to be a bee
     if (broj > 35) {
       newTarget.id = "goodBee";
       newTarget.style.backgroundColor = "transparent";
@@ -53,13 +54,14 @@ buttonPlay.addEventListener("mousedown", () => {
         newTarget.remove();
       }, 8000);
     }
+    //Odds for new div to be a wasp
     if (broj <= 35) {
       newTarget.id = "badWasp";
-
       setTimeout(() => {
         newTarget.remove();
       }, 2000);
     }
+    //Generating and assigning top and left position to generated divs and appending it to field div
     const topPosition = getRandomNumber(60, winHeight);
     const leftPosition = getRandomNumber(0, winWidth - 100);
     const rotatePosition = Math.round(getRandomNumber(0,180))
@@ -69,6 +71,7 @@ buttonPlay.addEventListener("mousedown", () => {
     newTarget.style.top = topPosition + "px";
     newTarget.style.left = leftPosition + "px";
     field.appendChild(newTarget);
+    //When timer hits 0-> Stop the game and reset values to default
     if(timer===0){
     clearInterval(interval);
     clearInterval(intervalSceonds)
