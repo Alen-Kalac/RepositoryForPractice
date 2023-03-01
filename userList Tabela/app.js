@@ -24,7 +24,6 @@ function dugmeFunction(){
     }
 }
 submitBtn.addEventListener("click", dugmeFunction)
-submitBtn.addEventListener("")
 const renderUsers = () => {
     const currentUser = users[users.length - 1]; 
     //Creating new Row and Cells
