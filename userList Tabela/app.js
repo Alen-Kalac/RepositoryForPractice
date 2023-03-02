@@ -9,10 +9,11 @@ const createuserFactory = (name, lastName, occupation) => {
         name, lastName, occupation
     };
 };
-const deleteUser = (userId)=>{
-    const newUsers = users.filter((user)=> user.id !== userId)
-    users = [... newUsers]
-   
+const deleteUser = (userId) => {
+    const newUsers = users.filter((user) => user.id !== userId)
+    users = [...newUsers]
+    renderUsers()
+
     console.log(users)
 }
 function dugmeFunction() {
@@ -30,37 +31,45 @@ function dugmeFunction() {
         document.querySelector("#occupation").value = "";
     }
 }
-submitBtn.addEventListener("click", dugmeFunction)
 const renderUsers = () => {
-    const currentUser = users[users.length - 1];
-    
+    let children = document.querySelectorAll(".addedRow")
+    let = new Array()
+    children.forEach((el) => usersTable.removeChild(el))
+
+    let rb = 0
+    users.forEach((currentUser) => {
+        rb++
         //Creating new Row and Cells
-    const currentRow = document.createElement('tr')
-    currentRow.classList.add("addedRow")
-    const userNameCell = document.createElement("td");
-    const lastNameCell = document.createElement("td");
-    const occupationCell = document.createElement("td");
-    const actionCell = document.createElement('td')
-    actionCell.addEventListener("click",()=> {
-        deleteUser(currentUser.id),usersTable.removeChild(currentRow)
+        const currentRow = document.createElement('tr')
+        currentRow.classList.add("addedRow")
+        const rbCell = document.createElement('td')
+        const userNameCell = document.createElement("td");
+        const lastNameCell = document.createElement("td");
+        const occupationCell = document.createElement("td");
+        const actionCell = document.createElement('td')
+        actionCell.addEventListener("click", () => {
+            deleteUser(currentUser.id)
+        })
+
+        // Appending Cells to created row
+        currentRow.appendChild(rbCell)
+        currentRow.appendChild(userNameCell);
+        currentRow.appendChild(lastNameCell);
+        currentRow.appendChild(occupationCell);
+        currentRow.appendChild(actionCell)
+
+        // Assinging text to created cells.
+        rbCell.textContent = `${rb}.`
+        userNameCell.textContent = currentUser.name;
+        lastNameCell.textContent = currentUser.lastName;
+        occupationCell.textContent = currentUser.occupation;
+        actionCell.textContent = "X"
+        // Appending new row to table element in HTML
+        usersTable.appendChild(currentRow);
     })
+}
+submitBtn.addEventListener("click", dugmeFunction)
 
-    // Appending Cells to created row
-    currentRow.appendChild(userNameCell);
-    currentRow.appendChild(lastNameCell);
-    currentRow.appendChild(occupationCell);
-    currentRow.appendChild(actionCell)
-
-    // Assinging text to created cells.
-
-    userNameCell.textContent = currentUser.name;
-    lastNameCell.textContent = currentUser.lastName;
-    occupationCell.textContent = currentUser.occupation;
-    actionCell.textContent = "X"
-    // Appending new row to table element in HTML
-    usersTable.appendChild(currentRow);
-    }
-;
 //Ocisti input
 //da se ne duplira ovo
 //Stilizovanje
