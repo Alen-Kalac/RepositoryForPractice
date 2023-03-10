@@ -42,6 +42,7 @@ const renderQuestion = () => {
         question.answers.forEach(answer => {
             const button = document.createElement("button")
             button.textContent = answer;
+            button.classList.add("buttonOdgovor")
             button.onclick = () => {
                 submitAnswer(question.id, button.textContent)
                 //Rendering next question
